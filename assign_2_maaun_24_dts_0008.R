@@ -28,4 +28,31 @@ mat<-matrix(1:9,nrow=3,ncol=3)
 
 mat[2,3]#(row2,column3)
 
+
 "mat*2(multiplies all element by 2)"
+
+my_list<-list(num_vec,mat,char_vec)
+
+df<data.frame(
+  name=c("Johm","Jane","Tom"),
+  age=c(23,35,28),
+  salary=c(50000,60000,58000)
+)
+
+extract_name<-df$name
+ptint(extract_name)
+
+extract_age<-df[["name"]]
+print(extract_age)
+
+df$gender<-c("M","F","M")
+print(df)
+
+row_1<df[1,]
+print(row_1)
+
+df<-rbind(df,data.frame(
+  name="Alice",
+  age=30,
+  salary=55000,
+ gender="F"))
